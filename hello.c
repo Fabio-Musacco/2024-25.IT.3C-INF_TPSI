@@ -20,6 +20,12 @@ int OR(int a, int B) {
     return (a+B)-(a*B);
 }
 
+int TAUTOLOGIA(int a, int B, int c, int d, int e, int f) {
+    // Il valore di ritorno della funzione
+    // TODO aggiungere l'espressione matematica per soddisfare la porta OR
+    return ((a-1)+a)*((B-1)+B)*((c-1)+c)*((d-1)+d)*((e-1)+e)*((f-1)+f);
+}
+
 int main() {
     // Dichiara una variabile
     int A, B, c, d, e, f;
@@ -66,7 +72,7 @@ int main() {
     // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Hai inserito il valore f: %d\n", f);
 
-    if (A != 0 && A != 1 && B != 0 && B != 1 && c != 0 && c != 1 && d != 0 && d != 1 && e != 0 && e != 1 && f != 0 &&  != 1) {
+    if (A != 0 && A != 1 && B != 0 && B != 1 && c != 0 && c != 1 && d != 0 && d != 1 && e != 0 && e != 1 && f != 0 && != 1) {
         printf("I valori inseriti non sono 1 o 0\n");
     } else {
         // Procediamo con l'esecuzione solo se il numero è 1 o 0
@@ -86,6 +92,10 @@ int main() {
         printf("I valori di A e B vengono trasformati da una porta OR\n");
         int orAB = OR(A, B);
         printf("Il valore di uscita della porta OR è: %d\n", orAB);
+
+        printf("I valori di A, B, C, D, E e F vengono trasformati dalla tautologia\n");
+        int tautologiaABCDEF = tautologia(A, B, c, d, e, f);
+        printf("Il valore di uscita della tautologia: %d\n", tautologiaABCDEF);
 
     }
     printf("\n\n");
