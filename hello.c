@@ -93,6 +93,12 @@ int main() {
         int orAB = OR(A, B);
         printf("Il valore di uscita della porta OR è: %d\n", orAB);
 
+        int orResult = OR(A, B);
+        int andResult = AND(A, orResult);
+        int notResult = NOT(andResult);
+
+        printf("Il valore di uscita di NOT(AND(A, OR(A, B))) è: %d\n", notResult);
+
         printf("I valori di A, B, C, D, E e F vengono trasformati dalla tautologia\n");
         int tautologiaABCDEF = tautologia(A, B, c, d, e, f);
         printf("Il valore di uscita della tautologia: %d\n", tautologiaABCDEF);
