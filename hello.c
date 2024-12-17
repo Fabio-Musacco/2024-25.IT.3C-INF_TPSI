@@ -17,13 +17,7 @@ int AND(int a, int B) {
 int OR(int a, int B) {
     // Il valore di ritorno della funzione
     // TODO aggiungere l'espressione matematica per soddisfare la porta OR
-    return a + B;
-}
-
-    int tautologia(int a, int B, int c, int d, int e, int f) {
-    // Il valore di ritorno della funzione
-    // TODO aggiungere l'espressione matematica per soddisfare la porta OR
-    return a + B + c + d + e + f;
+    return (a+B)-(a*B);
 }
 
 int main() {
@@ -44,31 +38,35 @@ int main() {
     // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Hai inserito il valore B: %d\n", B);
 
+      // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Inserisci il valore di c (0 o 1):\n");
     // Attende che l'utente inserisca un valore e prema invio
     scanf("%d", &c);
     // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Hai inserito il valore c: %d\n", c);
 
+      // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Inserisci il valore di d (0 o 1):\n");
     // Attende che l'utente inserisca un valore e prema invio
     scanf("%d", &d);
     // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Hai inserito il valore d: %d\n", d);
 
+      // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Inserisci il valore di e (0 o 1):\n");
     // Attende che l'utente inserisca un valore e prema invio
     scanf("%d", &e);
     // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Hai inserito il valore e: %d\n", e);
 
+      // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Inserisci il valore di f (0 o 1):\n");
     // Attende che l'utente inserisca un valore e prema invio
     scanf("%d", &f);
     // Mostra un messaggio sul terminale che l'utente può leggere
     printf("Hai inserito il valore f: %d\n", f);
 
-    if (A != 0 && A != 1 && B != 0 && B != 1) {
+    if (A != 0 && A != 1 && B != 0 && B != 1 && c != 0 && c != 1 && d != 0 && d != 1 && e != 0 && e != 1 && f != 0 &&  != 1) {
         printf("I valori inseriti non sono 1 o 0\n");
     } else {
         // Procediamo con l'esecuzione solo se il numero è 1 o 0
@@ -89,14 +87,6 @@ int main() {
         int orAB = OR(A, B);
         printf("Il valore di uscita della porta OR è: %d\n", orAB);
 
-        if (A != 0 && A != 1 && B != 0 && B != 1 && c != 0 && c != 1 && d != 0 && d != 1 && e != 0 && e != 1 && f != 0 && f != 1 &&) {
-        printf("I valori inseriti non sono 1 o 0\n");
-    } else {
-
-        printf("I valori di A, B, c, d, e, f vengono trasformati in una tautologia\n");
-        int tautologiaris = tautologia(A, B, c, d, e, f,);
-        printf("Il valore di uscita della porta OR è: %d\n", tautologiaris);
     }
-
     printf("\n\n");
 }
